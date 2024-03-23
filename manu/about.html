@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background: url(color.jpg);
+            font-size:30px;
+             font-family: poppins;
+             font-weight: 900;
+        }
+        p,h2{
+            color:blue;
+
+        }
+        a{
+            color: aquamarine;
+        }
+        .p9{
+            display: flex;
+            background-color: grey;
+            width: 40em;
+            box-shadow: 5px 5px 5px black;
+            border-radius: 3px;
+        }
+        .p10{
+            color:blue;
+            font-size: 60px;
+            font-weight: 400;
+
+        }
+        .p11{
+            margin-left: 15px;
+            line-height: 90px;
+            height: 90px;
+            overflow: hidden;
+        }
+        .p11 li{
+            list-style: none;
+            color: green;
+            font-size: 60px;
+            font-weight: 400;
+            position: relative;
+            top: 0;
+            animation: slide 12s steps(4)infinite;
+        }
+        @keyframes slide{
+            100%{
+                top: -360px;
+            }
+        }
+        .p11 li{
+            position: relative;
+        }
+        .p11 li::after{
+            content: "";
+            position: absolute;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background:url(color.jpg);
+            border-left: 2px solid whitesmoke;
+            animation: typing 3s steps(10)infinite;
+
+        }
+        @keyframes typing{
+            40%,
+            60%{
+                top: -360px;
+                left: calc(100% + 30px);
+            }
+            100%{
+                left:0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="p3">
+    <h2>About us</h2>
+    <p>Our Website is a website that provides the following services:</p>
+    <div class="p9">
+        <div class="p10">services ::</div>
+    <ol class="p11">
+        <li><span>Creating Websites.</span> </li>
+        <li><span>Advertising.</span></li>
+        <li><span>Freelancing.</span></li>
+        <li><span>Performing graphic design.</span></li>
+        <li><span>Computer Repair and Maintanance.</span></li>
+    
+    </ol>
+    </div>
+    <p>Among others...</p>
+    <p>To find us click here   <a href="contact.html">Find us</a></p>
+    <a href="dope.html">Back home</a>
+    <p>&copy  2024 All rights reserved||Thanks for visiting welcome back </p>
+</body>
+</html>

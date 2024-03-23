@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin-left: 20em;
+            background:linear-gradient(
+            to right, 
+            red 0%, 
+            red 50%, 
+            maroon 50%, 
+            maroon 100%);
+            font-size:20px;
+            font-family: poppins;
+            font-weight: 900;
+        }
+         .box{
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            min-height:100vh;
+             position:relative;
+             width:600px;
+             height: 500px;
+             background:black;
+             border-radius:8px;
+             margin-left:1.5em;
+             overflow:hidden;
+         }
+         .box form{
+             position:absolute;
+             inset:4px;
+             background-color:black;
+             padding:50px 40px;
+             z-index: 2;
+             display:flex;
+             flex-direction:column;
+         }
+         .box form h2{
+             color:blue;
+             font-weight:500;
+             text-align:center;
+             letter-spacing:0.1em;
+         }
+         .box form .inputBox{
+             position:relative;
+             width:600px;
+             margin-top:35px;
+             border:none;
+         }
+         .box::before{
+             content:'';
+             position:absolute;
+             top:-50%;
+             left:-50%;
+             height:500px;
+             width:500px;
+             background:linear-gradient(0deg, transparent,
+             transparent, blue, blue, blue );
+             z-index:1;
+             transform-origin:bottom right;
+             animation:animate 7s linear infinite;
+             
+             
+         }
+         
+         .box::after{
+             content:'';
+             position:absolute;
+             top:-50%;
+             left:-50%;
+             height:280px;
+             width:420px;
+             background:linear-gradient(0deg, transparent,
+             transparent, blue, blue, blue );
+             z-index:1;
+             transform-origin:bottom right;
+             animation:animate 7s linear infinite;
+             animation-delay:-3s;
+             }
+             borderline{
+                 position: absolute;
+                 top:0%;
+                 inset:0%;
+             }
+             borderline::before{
+                 
+                 content:'';
+             position:absolute;
+             top:-50%;
+             left:-50%;
+             height:280px;
+             width:420px;
+             background:linear-gradient(0deg, transparent,
+             transparent, red, red, red );
+             z-index:1;
+             transform-origin:bottom right;
+             animation:animate 7s linear infinite;
+             animation-delay:-1.5s;
+             
+             }
+         
+         @keyframes animate{
+             0%
+             {
+                 transform:rotate(0deg);
+             }
+             100%
+             {
+                 transform:rotate(360deg);
+             }
+         }
+          #p1,#p2{
+             color:white;
+         }
+         #p5{
+            font-size: 20px;
+            font-family: poppins;
+         }
+         h2{
+            background:linear-gradient(
+            to left, 
+            red 0%, 
+            red 30%, 
+            white 30%, 
+            white 60%,
+            maroon 60%, 
+            maroon 100%);
+            width: 20em;
+            text-align: center;
+            border-radius: 2px;
+         }
+        </style>
+        <script>
+            function click(){
+                    document.getElementById("p4").value;{
+                        alert("Loading on process Please wait");       
+                    }
+                }
+        </script>
+        </head>
+       <h2>Welcome To our Website.</h2>
+       <p id="p1"> Please Log in to Continue using our Website</p>
+       <div class="box">
+       <form>
+        <h3>SIGN IN</h3>
+         <div class="inputbox">
+            <pre id="p1">Username</pre>
+         <input type="text" required="required">
+         
+         <i></i>
+         </div>
+         <div class="inputbox">
+            <pre id="p2">password</pre>
+         <input type="password" id="p4" required="required">
+         
+         <i></i>
+         </div>
+        
+         <div class="links">
+         <a href="forgot.html">ForgotPassword?</a>
+         <br>
+         <br>
+         <a href="dope.html">Sign Up</a>
+         <br>
+         <br>
+         </div>
+         <button id="p5"onclick="click()">LogIn</button>
+       </form>  
+       </div>
+    <a href="dope.html">Back home</a>
+    <a href="contact.html">Contact</a>
+    <p>&copy  2024 All rights reserved||Thanks for visiting welcome back </p>
+    
+
+        </body>
+       </html>
